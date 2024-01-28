@@ -1,15 +1,15 @@
 
 - name: Add Application User
-  ansible.builtin.user:
+  ansible.builtin.file:
     name: roboshop
 
 - name: Remove Old Content
-  ansible.builtin.user:
+  ansible.builtin.file:
     name: /app
     state: absent
 
 - name: Create App Directory
-  ansible.builtin.user:
+  ansible.builtin.file:
     name: /app
     state: directory
 
